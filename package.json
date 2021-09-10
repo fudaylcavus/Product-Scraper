@@ -10,7 +10,8 @@
   "license": "ISC",
   "dependencies": {
     "expressjs": "^1.0.1",
-    "postgresql": "0.0.1",
-    "puppeteer": "^10.2.0"
+    "pg": "^8.7.1",
+    "puppeteer": "^10.2.0",
+    "uuid": "^8.3.2"
   }
 }

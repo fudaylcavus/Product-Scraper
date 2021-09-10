@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <%- include('../partials/head') %>
+    <style>
+        body {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+        }
+        .center {
+            text-align: center;
+            grid-column: 3 / 4;
+        }
+    </style>
+    <body>
+        <div class="center">
+            <table border="1" style="text-align: center;">
+                <tr>
+                    <td colspan="2"><img src="<%= product.img_src %>" alt="product"></td>
+                </tr>       
+                <tr>
+                    <td>ID: </td>
+                    <td><%= product.id %></td>
+                </tr>
+                <tr>
+                    <td>Title</td>
+                    <td><%= product.title %></td>
+                </tr>
+                <tr>
+                    <td width="20%">Price: </td>
+                    <td width="80%"><%= "£" +product.price.toFixed(2) %></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><a href="../products"> &lt;-- Go Back</a></td>
+                </tr>
+            </table>
+        </div>
+    </body>
+</html>

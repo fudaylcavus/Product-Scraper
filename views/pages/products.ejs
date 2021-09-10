@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <%- include('../partials/head') %>
+    <body>
+        <table border="1" style="text-align: center;">
+            <thead>
+                <tr>
+                    <th width="20%">id</th>
+                    <th width="30%">title</th>
+                    <th width="35%">img_src</th>
+                    <th width="15%">price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% products.forEach(product => {
+                    %>
+                    <tr>
+                        <td><a href='products/<%= product.id %>'><%= product.id %></a></td>
+                        <td><%= product.title %></td>
+                        <td><%= product.img_src %></td>
+                        <td><%= "£" +product.price.toFixed(2) %></td>
+                    </tr>       
+                    <%
+                }) %>
+                <tr>
+                    <td colspan="4"><a href="../">Scrape more product!</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

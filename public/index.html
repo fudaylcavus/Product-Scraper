@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Scrape from Etsy</title>
+    </head>
+    <style>
+        body {
+            display: grid;
+            min-height: 100vh;
+            grid-template: repeat(5, 1fr) / repeat(5, 1fr);
+        }
+        .center {
+            text-align: center;
+            grid-area: 3 / 3 / 4 /4;
+        }
+    </style>
+    <body>
+        <div class="center">
+            <a href="/products"><p>Products List</p></a>
+            <form method="POST" onsubmit="changeStatus('Loading...')">
+                <input placeholder="Etsy Product Url" name="product_url" type="url" required/>
+                <input type="submit"">
+            </form>
+            <p id="status"></p>
+        </div>
+    </body>
+    <script>
+        function changeStatus(status) {
+            const statusElement = document.getElementById('status')
+            statusElement.innerText = status;
+        }
+    </script>
+</html>

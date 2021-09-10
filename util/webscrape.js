@@ -20,7 +20,6 @@ const fetchEtsyProduct = async (url) => {
 
     // console.log({title, price, imgUrl})
 
-
     await browser.close();
     return {title, price, imgUrl} 
 }

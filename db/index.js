@@ -1,10 +1,11 @@
 const {Pool} = require('pg');
 const  uuidv4 = require('uuid').v4;
+require('dotenv').config();
 const pool = new Pool({
-       host: "localhost",
-       user: "postgres",
-       password: "Ed1102375",
-       port: 5432,
+       host: process.env.DB_HOST,
+       user: process.env.DB_USER,
+       password: process.env.DB_PASS,
+       port: process.env.DB_PORT,
     })
 
 const saveToDatabase = async ({title, price, imgUrl}) => {
